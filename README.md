@@ -12,7 +12,7 @@ Join both tables to analyze how customers are responding to the new menu — bes
 
 ## KEY QUESTIONS ANSWERED
  Here are the key questions this analysis answers, organized by section:
-## Menu Exploration
+### Menu Exploration
 1.How many items are on the menu?
 
 2.What are the least and most expensive items?
@@ -22,7 +22,7 @@ Join both tables to analyze how customers are responding to the new menu — bes
 4.How many dishes fall into each category?
 
 5.What is the average dish price within each category?
-## Order Exploration
+### Order Exploration
 6. What is the date range covered by the order data?
   
 7. How many total orders were placed in that range?
@@ -32,7 +32,7 @@ Join both tables to analyze how customers are responding to the new menu — bes
 9. Which orders contained the most items?
    
 10. How many orders had more than 12 items?
-## Combined Menu + Order Analysis
+### Combined Menu + Order Analysis
 11. What are the least and most ordered items, and which categories do they belong to?
    
 12. What were the top 5 highest-spending orders?
@@ -51,6 +51,7 @@ https://mavenanalytics.io/data-playground?pageSize=10
 ## TOOLS USED 
 SQL
 ## SQL ANALYSIS AND QUERIES
+## exploring the item table 
 ### 1. view the menu_items table.
 ```sql
 select * from menu_items;
@@ -128,7 +129,52 @@ from order_details
 group by order_id;
 ```
 
+## Combined Menu + Order Analysis 
+### 1. COMBINE THE MENU_ITEMS AND ORDER_DETAILS TABLES INTO A SINGLE TABLE 
+```sql
+select * FROM menu_items;
+select * FROM order_details;
+select * 
+FROM order_details OD LEFT JOIN menu_items MI 
+       ON OD.item_id = MI.menu_item_id; 
 
+```
+### 2. WHAT ARE THE LEAST AND MOST OREDERED ITEMS? WHAT CATEGORIES WERE THEY IN ?
+```sql
+select item_name , count(order_details_id) AS NUM_PURCHASES
+FROM order_details OD LEFT JOIN menu_items MI 
+       ON OD.item_id = MI.menu_item_id
+group by item_name
+order by NUM_PURCHASES desc;
+```
+### 3.  WHAT WERE THE TOP 5 ORDERS THAT SPENT THE MOST MONEY?
+```sql
+select order_id, sum(price) as  total_spend
+FROM order_details OD LEFT JOIN menu_items MI 
+       ON OD.item_id = MI.menu_item_id
+       group by order_id
+       order by total_spend desc
+       limit 5;
+```
+
+### 4. VIEW THE DETAILS OF THE HIGHEST SPEND ORDER.  WHAT INSIGHTS CAN YOU GATHER FROM THE data
+```sql
+select category, count( item_id) as numP_items 
+FROM order_details OD LEFT JOIN menu_items MI 
+       ON OD.item_id = MI.menu_item_id
+       where order_id = 440
+       group by category;
+```
+
+###  5. VIEW THE DETAILS OF THE TOP 5 HIGHEST SPEND ORDERS. WHAT INSIGHTS CAN YOU GATHER FROM 
+```sql
+select category, count( item_id) as num_items 
+FROM order_details OD LEFT JOIN menu_items MI 
+       ON OD.item_id = MI.menu_item_id
+       where order_id in (440,2075,1957,330,2675)
+       group by order_id,category;
+```
+     
 
 
 

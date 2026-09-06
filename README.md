@@ -40,3 +40,9 @@ Join both tables to analyze how customers are responding to the new menu — bes
 13. What items/categories made up the highest-spending order — and what insight does that reveal?
     
 14. What items/categories made up the top 5 highest-spending orders — and what pattern emerges across them?
+
+## DATA DESCRIPTION 
+A MySQL script that builds a restaurant_db schema with two tables:
+order_details — 12,234 rows of individual order line items, each with an order_details_id, order_id, order_date, order_time, and item_id (linking to a menu item).
+Multiple rows share the same order_id when a customer ordered several items at once. Data spans Jan 1 – Mar 31, 2023.
+menu_items — 32 rows, a lookup table of menu_item_id, item_name, category (American, Asian, Mexican, Italian), and price.

@@ -24,12 +24,19 @@ Join both tables to analyze how customers are responding to the new menu — bes
 5.What is the average dish price within each category?
 ## Order Exploration
 6. What is the date range covered by the order data?
+  
 7. How many total orders were placed in that range?
+
 8. How many individual items were ordered in that range?
+
 9. Which orders contained the most items?
+   
 10. How many orders had more than 12 items?
 ## Combined Menu + Order Analysis
 11. What are the least and most ordered items, and which categories do they belong to?
+   
 12. What were the top 5 highest-spending orders?
+    
 13. What items/categories made up the highest-spending order — and what insight does that reveal?
+    
 14. What items/categories made up the top 5 highest-spending orders — and what pattern emerges across them?

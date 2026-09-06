@@ -63,4 +63,38 @@ select count(*)  from menu_items;
 ```sql
 select * from menu_items
 order by price;
+select * from menu_items
+order by price DESC;
 ```
+### 4. how many italian dishes are on the menu?
+```sql
+select count(*) FROM menu_items 
+WHERE category= 'italian';
+```
+
+### 5. what are the least and most expensive italian dishes on the meanu?
+```sql
+select* 
+from menu_items 
+where category='italian'
+order by price;
+
+select* 
+from menu_items 
+where category='italian'
+order by price desc;
+```
+### 6. how many dishes are in each cotegory?
+```sql
+SELECT category, count(menu_item_id) as num_dishes
+from menu_items 
+group by category;
+```
+### 7. waht is the average dish price within each category?
+```sql
+SELECT category, avg(price) as avg_price
+from menu_items 
+group by category;
+```
+
+

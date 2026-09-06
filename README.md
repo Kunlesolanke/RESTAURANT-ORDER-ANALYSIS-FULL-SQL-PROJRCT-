@@ -96,6 +96,40 @@ SELECT category, avg(price) as avg_price
 from menu_items 
 group by category;
 ```
+## EXPLORING THE ORDER TABLE
+
+### 1. VIEW THE ORDER TABLE 
+```sql
+SELECT * FROM order_details;
+```
+### 2. WHAT IS THE DATE RANGE OF THE TABLE?
+```sql
+SELECT MIN(order_details) , MAX (order_date) from order_details;
+```
+### 3. HOW MANY ORDERS WERE MADE WITHIN THIS DATE RANGE?
+```SQL
+select count(distinct order_id) FROM order_details;
+```
+### 4. HOW MANY ITEMS WERE OREDERED WITHIN THIS DATE RANGE?
+```sql
+SELECT COUNT(*) FROM order_details;
+```
+### 5. WHICH ORDERS HAD THE MOST NUMBER OF ITEMS?
+```sql
+select order_id , count(item_id) as num_items 
+from order_details
+group by order_id
+order by num_items desc;
+```
+### 6. HOW MANY ORDERS HAD  MORE THAN 12 ITEMS?
+```sql
+(select order_id , count(item_id) as num_items 
+from order_details
+group by order_id;
+```
+
+
+
 
 
 

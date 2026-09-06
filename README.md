@@ -175,7 +175,27 @@ FROM order_details OD LEFT JOIN menu_items MI
        group by order_id,category;
 ```
      
+## Key Insights
 
+- Strong lunch and dinner rush pattern — 12 PM, 1 PM, and 5 PM are the three busiest hours, showing clearly defined peak windows rather than steady all-day traffic.
+- Italian and Asian dishes drive the business — together they account for 60% of total revenue ($96,183 of $159,218), despite American and Mexican having comparable or greater item counts on the menu.
+- Small basket sizes — customers order 2.26 items per order on average, suggesting most visits are individual meals rather than group/family orders.
+- Revenue is concentrated in a handful of dishes — the top 5 items (Korean Beef Bowl, Spaghetti & Meatballs, Tofu Pad Thai, Cheeseburger, Hamburger) account for a disproportionate share of sales relative to the other 27 menu items.
+- Consistent 3-month performance — no major revenue collapse or spike across Jan–Mar 2023, indicating stable, predictable demand rather than seasonal volatility.
+
+## Recommendations
+
+1. Staff to the peaks — schedule more front-of-house and kitchen staff around 12–1 PM and 5 PM specifically, rather than flat shift coverage, to reduce wait times during the highest-volume hours.
+2. Promote high-margin, high-velocity items — feature Korean Beef Bowl and Spaghetti & Meatballs prominently (menu placement, upsell prompts) since they already have proven demand and revenue pull.
+3. Bundle to raise basket size — with only 2.26 items per order, a "meal + side + drink" combo or an appetizer upsell prompt could meaningfully lift average order value.
+4. Investigate underperforming categories — American items have the lowest category revenue despite having competitively priced staples (Hamburger, Cheeseburger); worth testing whether this is a pricing, positioning, or marketing gap.
+5. Extend the analysis — layer in customer-level data (if available) to distinguish repeat vs. one-time customers, which would let recommendations target retention rather than just volume.
+
+## Conclusion
+
+Over the three-month period analyzed, the restaurant generated $159,217.90 in revenue across 5,343 orders, averaging $29.80 per order. Demand is concentrated around lunch and early dinner, and revenue is skewed toward Italian and Asian dishes and a small set of bestselling items. These patterns point to clear, low-cost operational levers — smarter staffing around peak hours and targeted upselling — that could improve both efficiency and average order value without requiring menu-wide changes.
+
+Want me to add this as a section in the README file so it's ready to push to GitHub as-is?
 
 
 

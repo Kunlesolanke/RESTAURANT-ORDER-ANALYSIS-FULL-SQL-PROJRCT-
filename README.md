@@ -14,9 +14,13 @@ Join both tables to analyze how customers are responding to the new menu — bes
  Here are the key questions this analysis answers, organized by section:
 ## Menu Exploration
 .How many items are on the menu?
+
 .What are the least and most expensive items?
+
 .How many Italian dishes are on the menu, and what are their price extremes?
+
 .How many dishes fall into each category?
+
 .What is the average dish price within each category?
 ## Order Exploration
 6. What is the date range covered by the order data?

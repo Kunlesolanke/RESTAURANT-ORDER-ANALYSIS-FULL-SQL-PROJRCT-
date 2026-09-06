@@ -175,14 +175,6 @@ FROM order_details OD LEFT JOIN menu_items MI
        group by order_id,category;
 ```
      
-## Key Insights
-
-- Strong lunch and dinner rush pattern — 12 PM, 1 PM, and 5 PM are the three busiest hours, showing clearly defined peak windows rather than steady all-day traffic.
-- Italian and Asian dishes drive the business — together they account for 60% of total revenue ($96,183 of $159,218), despite American and Mexican having comparable or greater item counts on the menu.
-- Small basket sizes — customers order 2.26 items per order on average, suggesting most visits are individual meals rather than group/family orders.
-- Revenue is concentrated in a handful of dishes — the top 5 items (Korean Beef Bowl, Spaghetti & Meatballs, Tofu Pad Thai, Cheeseburger, Hamburger) account for a disproportionate share of sales relative to the other 27 menu items.
-- Consistent 3-month performance — no major revenue collapse or spike across Jan–Mar 2023, indicating stable, predictable demand rather than seasonal volatility.
-
 ## Recommendations
 
 1. Promote the most ordered dishes

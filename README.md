@@ -54,3 +54,13 @@ SQL
 ### 1. view the menu_items table.
 ```sql
 select * from menu_items;
+```
+### 2. find the number of items on the menu
+```sql
+select count(*)  from menu_items;
+```
+###  3. what are the least and most expensive items on the menu? 
+```sql
+select * from menu_items
+order by price;
+```

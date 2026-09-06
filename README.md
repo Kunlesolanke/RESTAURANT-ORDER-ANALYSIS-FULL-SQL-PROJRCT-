@@ -46,3 +46,5 @@ A MySQL script that builds a restaurant_db schema with two tables:
 order_details — 12,234 rows of individual order line items, each with an order_details_id, order_id, order_date, order_time, and item_id (linking to a menu item).
 Multiple rows share the same order_id when a customer ordered several items at once. Data spans Jan 1 – Mar 31, 2023.
 menu_items — 32 rows, a lookup table of menu_item_id, item_name, category (American, Asian, Mexican, Italian), and price.
+## DATA SOURCE 
+https://mavenanalytics.io/data-playground?pageSize=10

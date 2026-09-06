@@ -185,17 +185,42 @@ FROM order_details OD LEFT JOIN menu_items MI
 
 ## Recommendations
 
-1. Staff to the peaks — schedule more front-of-house and kitchen staff around 12–1 PM and 5 PM specifically, rather than flat shift coverage, to reduce wait times during the highest-volume hours.
-2. Promote high-margin, high-velocity items — feature Korean Beef Bowl and Spaghetti & Meatballs prominently (menu placement, upsell prompts) since they already have proven demand and revenue pull.
-3. Bundle to raise basket size — with only 2.26 items per order, a "meal + side + drink" combo or an appetizer upsell prompt could meaningfully lift average order value.
-4. Investigate underperforming categories — American items have the lowest category revenue despite having competitively priced staples (Hamburger, Cheeseburger); worth testing whether this is a pricing, positioning, or marketing gap.
-5. Extend the analysis — layer in customer-level data (if available) to distinguish repeat vs. one-time customers, which would let recommendations target retention rather than just volume.
+1. Promote the most ordered dishes
+   The restaurant should give greater promotional attention to the most frequently purchased dishes. These items can be highlighted on the menu, recommended to customers, or included in special offers.
+
+2. Review the least ordered items
+   Items with very low purchase volumes should be reviewed. Management should consider improving their presentation, adjusting their prices, promoting them more effectively, or removing them if they consistently perform poorly.
+
+3. Focus on high-value orders
+   The restaurant should study the characteristics of the highest-spending orders and encourage customers to purchase more items through meal combinations, add-ons, and premium options.
+
+4. Develop strategic menu pricing
+   The average prices across categories should be compared with their sales performance. Categories with strong demand and reasonable prices could receive more attention, while expensive dishes with low demand may require price adjustments.
+
+5. Create meal combinations and bundles
+   Since some orders contain multiple items, the restaurant could introduce combinations such as main dish + side + drink. This could increase the average amount spent per order.
+
+6. Improve inventory management
+   The most ordered dishes should receive priority when planning stock levels. Maintaining sufficient ingredients for popular dishes can reduce the risk of stockouts and lost sales.
+
+7. Use customer ordering patterns for marketing
+   The restaurant should use its order data to create targeted promotions around popular categories and dishes. For example, frequently purchased items could be promoted during periods of lower sales.
+
+8. Monitor sales performance regularly
+   Management should continue using SQL or business intelligence tools such as Power BI to monitor orders, revenue, popular dishes, average order value, and category performance over time.
+
+9. Investigate large orders
+   Orders with unusually high numbers of items should be analyzed further to determine whether they are individual customer orders, group orders, or special events. This could reveal opportunities for catering and bulk-order services.
+
+10. Make data-driven menu decisions
+    Future decisions about adding, removing, pricing, or promoting menu items should be based on actual sales and customer ordering data rather than assumptions.
 
 ## Conclusion
 
-Over the three-month period analyzed, the restaurant generated $159,217.90 in revenue across 5,343 orders, averaging $29.80 per order. Demand is concentrated around lunch and early dinner, and revenue is skewed toward Italian and Asian dishes and a small set of bestselling items. These patterns point to clear, low-cost operational levers — smarter staffing around peak hours and targeted upselling — that could improve both efficiency and average order value without requiring menu-wide changes.
+The SQL analysis of the restaurant database provided useful insights into the restaurant's menu and order patterns. By combining the "menu_items" and "order_details" tables, it was possible to examine customer purchasing behavior, identify the most and least ordered menu items, analyze the highest-spending orders, and understand the distribution of dishes across different food categories.
 
-Want me to add this as a section in the README file so it's ready to push to GitHub as-is?
+The analysis showed that some menu items were ordered significantly more frequently than others, indicating that customers have clear preferences for certain dishes. The analysis of the top five highest-spending orders also showed that some customers placed larger orders containing multiple items and categories. This information can help the restaurant understand which categories and dishes contribute most to sales.
 
+The menu analysis further revealed the number of dishes available in each category, the average price of dishes within each category, and the differences between the least and most expensive items. These findings can help management evaluate the restaurant's menu structure and pricing strategy.
 
-
+Overall, SQL provided an effective way to transform the restaurant's raw transactional data into meaningful business insights. The findings can be used to improve menu planning, pricing, inventory management, marketing, and customer satisfaction.

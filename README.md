@@ -48,3 +48,9 @@ Multiple rows share the same order_id when a customer ordered several items at o
 menu_items — 32 rows, a lookup table of menu_item_id, item_name, category (American, Asian, Mexican, Italian), and price.
 ## DATA SOURCE 
 https://mavenanalytics.io/data-playground?pageSize=10
+## TOOLS USED 
+SQL
+## SQL ANALYSIS AND QUERIES
+### 1. view the menu_items table.
+```sql
+select * from menu_items;
